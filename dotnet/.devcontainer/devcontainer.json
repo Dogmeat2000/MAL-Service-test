@@ -18,15 +18,10 @@
   "containerEnv": {
     "AZURE_AUTH_USE_KEYCHAIN": "false"
   },
-  "features": {
-    "ghcr.io/devcontainers/features/azure-cli:1": {
-      "version": "latest"
-    }
-  },
   "remoteUser": "root",
   "customizations": {
     "jetbrains": {
-      "backend": "Rider:2024.3",
+      "backend": "Rider",
       "plugins": [
         "org.jetbrains.plugins.github",
         "com.intellij.resharper.azure"
