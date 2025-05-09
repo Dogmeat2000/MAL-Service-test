@@ -44,6 +44,11 @@ RUN python3 -m venv /venv \
     && . /venv/bin/activate \
     && pip install pythonnet==3.0.5 azureml-core azureml-mlflow onnxruntime==1.17.1 numpy scipy
 
+RUN mkdir -p /opt/jetbrains-backend && \
+    curl -fsSL https://cache-redirector.jetbrains.com/intellij-repository/snapshots/com/jetbrains/remote-dev-backend/rider-backend/2024.1.0/rider-backend-2024.1.0.tar.gz | \
+    tar -xz -C /opt/jetbrains-backend
+
+
 # Create a directory for SSL certificates:
 RUN mkdir -p /https
 
